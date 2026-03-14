@@ -5,7 +5,7 @@
 
 template< class T >
 T* merge(const T* a, size_t sa, const T* b, size_t sb, T* c, size_t capacity) {
-  id (sa + sb > capacity) {
+  if (sa + sb > capacity) {
     return nullptr;
   }
   T* temp = new T[sa + sb];
